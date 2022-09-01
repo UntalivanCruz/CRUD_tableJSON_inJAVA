@@ -28,7 +28,7 @@ public class JSON_CRUD extends javax.swing.JFrame {
         String []txtForm = new String[2];
         txtForm[0]=this.txtNombre.getText();
         txtForm[1]=this.txtTelefono.getText();
-        
+        //&&
         if(txtForm[0].length()>0 || txtForm[1].length()>0){
             this.modelTablaPersonas.addRow(txtForm);
             return true;
@@ -60,12 +60,16 @@ public boolean updateTablePersonas(){
         txtForm[0]=this.txtNombre.getText();
         txtForm[1]=this.txtTelefono.getText();
 
-        this.modelTablaPersonas.setValueAt(txtForm[0], posicion, 0);
-        this.modelTablaPersonas.setValueAt(txtForm[1], posicion, 1);
-        return true;
+        if(txtForm[0].length()>0 || txtForm[1].length()>0){
+            this.modelTablaPersonas.setValueAt(txtForm[0], posicion, 0);
+            this.modelTablaPersonas.setValueAt(txtForm[1], posicion, 1);
+            return true;
+        }else{
+            return false;
+        }
      }else{
         return false;
-    }
+     }
 }
 
     @SuppressWarnings("unchecked")
@@ -255,4 +259,8 @@ public boolean updateTablePersonas(){
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtTelefono;
     // End of variables declaration//GEN-END:variables
+
+    private void initComponents() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
