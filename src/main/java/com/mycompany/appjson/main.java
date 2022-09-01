@@ -5,17 +5,7 @@
 package com.mycompany.appjson;
 
 
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.FileNotFoundException;
 
-import java.io.IOException;
-import java.util.Scanner;
-import org.json.simple.JSONObject;
-import org.json.simple.JSONArray;
-
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
 /**
  *
@@ -30,7 +20,7 @@ public class main {
         // TODO code application logic here
         JSON_CRUD formPersonas = new JSON_CRUD();
         formPersonas.setVisible(true);
-
+/*
          JSONObject persona1 = new JSONObject();
          persona1.put("nombre","Juan Lopez");
          persona1.put("telefono", 99991111);
@@ -84,7 +74,7 @@ public class main {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
+*/
     }
     
 }

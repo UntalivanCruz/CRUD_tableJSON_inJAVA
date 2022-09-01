@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
  */
 public class JSON_CRUD extends javax.swing.JFrame {
     DefaultTableModel modelTablaPersonas;
+    String listPersonas;
     /**
      * Creates new form JSON_CRUD
      */
@@ -22,6 +23,10 @@ public class JSON_CRUD extends javax.swing.JFrame {
         this.modelTablaPersonas.addColumn("Telefono");
 
         this.tablePersonas.setModel(this.modelTablaPersonas);
+        PersonasJSON getJSON = new PersonasJSON();
+        System.out.println(getJSON.leerJSON());
+
+     //  this.modelTablaPersonas.addRow()
     }
 
    public boolean addTablePersonas(){
